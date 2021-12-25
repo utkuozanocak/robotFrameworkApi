@@ -1,0 +1,18 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Test Case TC_001_NotNullResponseControl                               | FAIL |
+No keyword with name 'GET On Session' found.
+------------------------------------------------------------------------------
+Test Case TC_002_Status200Test                                        | FAIL |
+No keyword with name 'GET On Session' found.
+------------------------------------------------------------------------------
+Test Case TC_003_NotNullControlTotal_Pages_Page_limit                 | FAIL |
+No keyword with name 'GET On Session' found.
+------------------------------------------------------------------------------
+Tests                                                                 | FAIL |
+3 tests, 0 passed, 3 failed
+==============================================================================
+Output:  /Users/uocak/Desktop/fireflyCaseStudy/firefly-api/Output/output.xml
+Log:     /Users/uocak/Desktop/fireflyCaseStudy/firefly-api/Output/log.html
+Report:  /Users/uocak/Desktop/fireflyCaseStudy/firefly-api/Output/report.html

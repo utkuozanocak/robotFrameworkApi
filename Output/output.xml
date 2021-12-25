@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on darwin)" generated="20211225 20:59:10.828" rpa="false" schemaversion="2">
+<suite id="s1" name="TC 003 NotNullControlTotal Pages Page limit" source="/Users/uocak/Desktop/fireflyCaseStudy/firefly-api/TestCases/TC_003_NotNullControlTotal_Pages_Page_limit.robot">
+<test id="s1-t1" name="TC_003_NotNullControlTotal_Pages_Page_limit">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Get_Users</arg>
+<arg>${Base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20211225 20:59:11.357" level="INFO">Creating Session using : alias=Get_Users, url=http://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20211225 20:59:11.357" endtime="20211225 20:59:11.357"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Get_Users</arg>
+<arg>public/v1/users</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20211225 20:59:12.716" level="INFO">GET Request : url=http://gorest.co.in/public/v1/users (redirected) 
+ path_url=/public/v1/users 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20211225 20:59:12.716" level="INFO">GET Response : url=https://gorest.co.in/public/v1/users 
+ status=200, reason=OK 
+ headers={'Server': 'nginx', 'Date': 'Sat, 25 Dec 2021 17:59:12 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding, Origin', 'X-Frame-Options': 'SAMEORIGIN', 'X-XSS-Protection': '0', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Permitted-Cross-Domain-Policies': 'none', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'ETag': 'W/"5ea0d8ca2568fdcb35f9855069771d79"', 'Cache-Control': 'max-age=0, private, must-revalidate', 'X-Request-Id': '3130011b-a17e-4316-ae53-ed5a7875bbe5', 'X-Runtime': '0.007290', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Content-Encoding': 'gzip'} 
+ body={"meta":{"pagination":{"total":1510,"pages":76,"page":1,"limit":20,"links":{"previous":null,"current":"https://gorest.co.in/public/v1/users?page=1","next":"https://gorest.co.in/public/v1/users?page=2"}}},"data":[{"id":1964,"name":"test","email":"test@12.com","gender":"male","status":"active"},{"id":2,"name":"Patricia","email":"damomca@gmail.com","gender":"female","status":"active"},{"id":30,"name":"Kanak Ahluwalia","email":"ahluwalia_kanak@thiel.com","gender":"female","status":"active"},{"id":31,"name":"Pushti Somayaji","email":"somayaji_pushti@moen.io","gender":"female","status":"inactive"},{"id":32,"name":"Msgr. Lakshminath Gill","email":"lakshminath_msgr_gill@quigley.net","gender":"female","status":"active"},{"id":33,"name":"The Hon. Bhaaswar Varma","email":"hon_the_varma_bhaaswar@rogahn.name","gender":"female","status":"active"},{"id":34,"name":"Shrishti Iyengar DO","email":"do_shrishti_iyengar@carter.org","gender":"male","status":"active"},{"id":35,"name":"Vaijayanti Pilla","email":"vaijayanti_pilla@rippin.net","gender":"male","status":"active"},{"id":36,"name":"Abhaidev Kaniyar PhD","email":"kaniyar_phd_abhaidev@jones-stracke.biz","gender":"female","status":"inactive"},{"id":37,"name":"Jagathi Kapoor","email":"jagathi_kapoor@schuster.org","gender":"female","status":"inactive"},{"id":38,"name":"Rev. Bhasvan Gupta","email":"rev_gupta_bhasvan@kutch-smitham.biz","gender":"female","status":"inactive"},{"id":39,"name":"Vasanti Malik LLD","email":"vasanti_lld_malik@fay.com","gender":"female","status":"active"},{"id":41,"name":"Msgr. Deenabandhu Kaul","email":"msgr_deenabandhu_kaul@reinger.io","gender":"female","status":"active"},{"id":42,"name":"Gov. Agastya Nayar","email":"nayar_gov_agastya@abshire-krajcik.name","gender":"female","status":"active"},{"id":43,"name":"Aadi Khan","email":"aadi_khan@jerde.net","gender":"female","status":"active"},{"id":44,"name":"Chandradev Gandhi","email":"chandradev_gandhi@braun-sporer.net","gender":"female","status":"active"},{"id":45,"name":"Bhaswar Adiga CPA","email":"bhaswar_adiga_cpa@kuhlman.com","gender":"male","status":"active"},{"id":46,"name":"Sujata Banerjee","email":"sujata_banerjee@schoen.name","gender":"male","status":"inactive"},{"id":47,"name":"Dron Nambeesan","email":"nambeesan_dron@macgyver.net","gender":"male","status":"inactive"},{"id":48,"name":"Bhupati Desai","email":"bhupati_desai@smitham-osinski.co","gender":"male","status":"active"}]} 
+ </msg>
+<msg timestamp="20211225 20:59:12.716" level="INFO">/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20211225 20:59:12.717" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20211225 20:59:11.358" endtime="20211225 20:59:12.717"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${json_response}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20211225 20:59:12.718" level="INFO">${json_response} = {'meta': {'pagination': {'total': 1510, 'pages': 76, 'page': 1, 'limit': 20, 'links': {'previous': None, 'current': 'https://gorest.co.in/public/v1/users?page=1', 'next': 'https://gorest.co.in/public/...</msg>
+<status status="PASS" starttime="20211225 20:59:12.717" endtime="20211225 20:59:12.718"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${total}</var>
+<arg>${json_response}</arg>
+<arg>meta.pagination.total</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20211225 20:59:12.751" level="INFO">${total} = [1510]</msg>
+<status status="PASS" starttime="20211225 20:59:12.718" endtime="20211225 20:59:12.751"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${pages}</var>
+<arg>${json_response}</arg>
+<arg>meta.pagination.pages</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20211225 20:59:12.773" level="INFO">${pages} = [76]</msg>
+<status status="PASS" starttime="20211225 20:59:12.751" endtime="20211225 20:59:12.773"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${page}</var>
+<arg>${json_response}</arg>
+<arg>meta.pagination.page</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20211225 20:59:12.794" level="INFO">${page} = [1]</msg>
+<status status="PASS" starttime="20211225 20:59:12.774" endtime="20211225 20:59:12.794"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${limit}</var>
+<arg>${json_response}</arg>
+<arg>meta.pagination.limit</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20211225 20:59:12.813" level="INFO">${limit} = [20]</msg>
+<status status="PASS" starttime="20211225 20:59:12.794" endtime="20211225 20:59:12.813"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${total}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20211225 20:59:12.814" level="INFO">Length is 1</msg>
+<status status="PASS" starttime="20211225 20:59:12.814" endtime="20211225 20:59:12.814"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${pages}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20211225 20:59:12.814" level="INFO">Length is 1</msg>
+<status status="PASS" starttime="20211225 20:59:12.814" endtime="20211225 20:59:12.814"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${limit}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20211225 20:59:12.815" level="INFO">Length is 1</msg>
+<status status="PASS" starttime="20211225 20:59:12.814" endtime="20211225 20:59:12.815"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${page}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20211225 20:59:12.815" level="INFO">Length is 1</msg>
+<status status="PASS" starttime="20211225 20:59:12.815" endtime="20211225 20:59:12.815"/>
+</kw>
+<status status="PASS" starttime="20211225 20:59:11.356" endtime="20211225 20:59:12.815"/>
+</test>
+<status status="PASS" starttime="20211225 20:59:10.830" endtime="20211225 20:59:12.816"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 003 NotNullControlTotal Pages Page limit">TC 003 NotNullControlTotal Pages Page limit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
