@@ -8,7 +8,7 @@
 - -m robot -d Output TestCases/TC_003_NotNullControlTotal_Pages_Page_limit.robot
 
 ## POM
-- /BaseTest alırnda baseUrl.py içerisinde test edilecek api url bulunmaktadır
+- /BaseTest altında baseUrl.py içerisinde test edilecek api url bulunmaktadır
 - /TestCases altında testler bulunmaktadır
 
 ## Reports
